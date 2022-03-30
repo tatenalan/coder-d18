@@ -1,0 +1,41 @@
+<div class="bg-light w-75 mx-auto mb-5 bd-example p-5 shadow rounded">
+  {{#if productList}}
+  <div>
+    <h5 class="primary text-center">Lista de productos</h5>
+    <form action="/cart/sendOrder" method="post">
+      <input type="hidden" name="id" value="{{id}}">
+      {{#each productList}}
+            {{#each this}}
+                  <input type="hidden" name="products[]" value="{{this}}">
+            {{/each}}
+      {{/each}}
+      <td><button type="submit" class="btn btn-primary">Send Order</button></td>
+    </form>
+  </div>
+  <br>
+  <table class="table bg-white">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Thumbnail</th>
+      </tr>
+    </thead>
+    <tbody id="table">
+      {{#each productList}}
+      <tr>
+        <th scope="row">{{this.id}}</th>
+        <td>{{this.name}}</td>
+        <td>${{this.price}}</td>
+        <td><img style="width:50px;" src="{{this.photo}}" alt=""></td>
+      </tr>
+      {{/each}}
+      {{else}}
+      <div class="alert alert-danger" role="alert">
+        Your cart is empty
+      </div>
+    </tbody>
+  </table>
+  {{/if}}
+</div>

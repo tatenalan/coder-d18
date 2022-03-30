@@ -1,0 +1,28 @@
+
+span#email {
+    color: blue;
+    font-weight: bold
+}
+span#date {
+    color: red
+}
+span#text {
+    color: green;
+    font-style: italic;
+}
+.registerButton {
+    margin-top: 10px;
+    color: blue;
+}
+.messageErrorTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: red;
+}
+.messageSuccessTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: green;
+}
