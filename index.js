@@ -20,4 +20,5 @@ app.use(express.urlencoded({ extended: true }));
 // configura nuestro directorio estático
 app.use(express.static(__dirname + '/public'));
 
+app.get('/', (req, res) => res.send('Inicio'))
 app.use('/api/products', routerProduct)

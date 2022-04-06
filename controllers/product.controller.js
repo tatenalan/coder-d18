@@ -5,9 +5,9 @@ const getProductController = async(req, res) => {
     res.json(products)
 }
 
-const insertProductController = (req, res) => {
+const insertProductController = async(req, res) => {
     const product = req.body
-    const productReturn = insertProductService(product)
+    const productReturn = await insertProductService(product)
     res.status(201).json(productReturn)
 }
 
