@@ -2,7 +2,6 @@ const { getProductsService, insertProductService } = require('../services/produc
 
 const getProductController = async(req, res) => {
     const products = await getProductsService()
-    console.log(products);
     res.json(products)
 }
 

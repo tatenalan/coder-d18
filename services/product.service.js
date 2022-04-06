@@ -1,4 +1,4 @@
-const { getProducts, insertProduct } = require('../models/products.js')
+const { getProducts, insertProduct } = require('../models/product.model.js')
 
 const getProductsService = async() => {
     return await getProducts()
